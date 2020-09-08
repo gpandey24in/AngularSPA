@@ -1,0 +1,21 @@
+<div class="container" style="margin:100px;">
+  <form [formGroup] ="employeeForm" (ngSubmit) = "OnSubmit()">
+<h1> Employee Form</h1>
+<div class="form-group" >
+  <label for="exampleInputEmail1">Name</label>
+  <input type="text" class="form-control" formControlName ="Name" id="Name" aria-describedby="emailHelp" placeholder="Enter Name">
+
+</div>
+    <div class="form-group" >
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="text" class="form-control" formControlName ="Email" id="Email" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="text" class="form-control" formControlName ="Password" id="exampleInputPassword1">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
