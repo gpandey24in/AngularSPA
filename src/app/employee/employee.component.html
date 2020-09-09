@@ -1,3 +1,5 @@
+
+
 <div class="container" style="margin:100px;">
   <form [formGroup] ="employeeForm" (ngSubmit) = "OnSubmit()">
 <h1> Employee Form</h1>
@@ -19,3 +21,27 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
+
+
+  <table class="table" style="margin:100px">
+    <thead>
+      <tr>
+        <th scope="col"> S.No</th>
+        <th scope="col"> Name</th>
+        <th scope="col"> Email</th>
+        <th scope="col"> Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let emp1 of employeeList;let i = index;">
+        <td>{{i+1}}</td>
+        <td>{{emp1.name}}</td>
+        <td>{{emp1.email}}</td>
+        <td>{{emp1.password}}</td>
+
+
+
+      </tr>
+    </tbody>
+  </table>
+

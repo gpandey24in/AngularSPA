@@ -12,6 +12,8 @@ import { EmpService } from './emp.service';
 export class EmployeeComponent implements OnInit {
 
   employeeForm: FormGroup;
+  employeeList;
+
   constructor(private fb: FormBuilder, private http: HttpClient,
     private empService: EmpService) {
        }
@@ -33,12 +35,16 @@ export class EmployeeComponent implements OnInit {
 
 
     this.empService.saveEmployee(this.employeeForm.value).subscribe(data => {
-      console.log(data);
+      this.GetEmployeeData();
     });
 }
 
+
   GetEmployeeData() {
     this.empService.GetAllEmployee().subscribe(data => {
+
+      this.employeeList = data;
+
       console.log(data);
     });
   }
