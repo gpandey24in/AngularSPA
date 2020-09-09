@@ -21,11 +21,11 @@ export class EmpService {
   }
 
   GetEmployeeById(empId) {
-    return this.http.get('https://localhost:44302/emp/' + empId);
+    return this.http.get('https://localhost:44302/emp/' + empId,);
   }
 
   DeleteEmployeeById(empId) {
-   return this.http.delete('https://localhost:44302/emp/' + empId);
+   return this.http.delete('https://localhost:44302/emp/' + empId,);
   }
 
 }

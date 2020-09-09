@@ -49,4 +49,11 @@ export class EmployeeComponent implements OnInit {
     });
   }
 
+  edit(Id) {
+    this.empService.GetEmployeeById(Id).subscribe(data => {
+      console.log(data);
+      this.employeeForm.patchValue(data);
+    });
+  }
+
 }
